@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Pataya';
+    src: url('fontes/Pattaya-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('fontes/Lora-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'IBM';
+    src: url('fontes/IBM_Plex_Serif/IBMPlexSerif-Light.ttf');
+}
+
+:root {
+    --cor01: #e0e0e0;
+    --cor02: #b9b9b7;
+    --cor03: #474747;
+    --cor04: #262626;
+    --cor05: #0D0D0D;
+    --fonte01: 'Pataya', serif;
+    --fonte02: 'Lora', sans-serif;
+    --fonte03: 'IBM', serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--cor03);
+}
+
+/* header */
+
+header {
+    width: 100vw;
+    height: 150px;
+}
+
+header {
+    background-color: var(--cor01);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+    box-shadow: 0px 1px 11px 1px rgba(0, 0, 0, 0.527);
+}
+
+h1 {
+    font-family: var(--fonte01);
+    text-align: center;
+    padding-top: 10px;
+    font-size: 50px;
+    padding-left: 30px;
+}
+
+#img-header {
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+}
+
+@media screen and (max-width: 768px) {
+    #img-header {
+        display: none;
+    }
+}
+
+/* main */
+
+.h2-main {
+    font-family: var(--fonte03);
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    font-size: 35px;
+}
+
+.p-main {
+    text-align: center;
+    font-size: 18px;
+    font-family: var(--fonte03);
+    font-weight: bold;
+}
+
+section {
+    background-color: var(--cor03);
+    width: 100vw;
+    height: 800px;
+    font-family: var(--fonte02);
+    margin-top: 50px;
+}
+
+.h2-section {
+    color: var(--cor01);
+    text-align: center;
+    padding-top: 20px;
+}
+
+.p-section {
+    color: var(--cor01);
+    text-align: center;
+    padding-top: 20px;
+}
+.links-planilhas {
+    padding: 8px;
+    border-radius: 13px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+a {
+    background-color: var(--cor01);
+    padding: 10px;
+    margin: 15px;
+    border-radius: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: var(--cor02);
+    color: black;
+    text-decoration: underline;
+}
+
+.planilha {
+    background-color: var(--cor01);
+    min-width: 200px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    height: 400px;
+    padding: 18px;
+    border-radius: 20px 0px 20px 0px;
+}
+
+.planilha p {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+    .planilha {
+        max-width: 1000px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .planilha {
+        max-width: 800px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .planilha {
+        min-width: 300px;
+        max-width: 400px;
+    }
+}
