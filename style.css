@@ -31,13 +31,14 @@
     margin: 0;
     box-sizing: border-box;
     color: var(--cor03);
+    scroll-behavior: smooth;
 }
 
 /* header */
 
 header {
     width: 100vw;
-    height: 150px;
+    height: 200px;
 }
 
 header {
@@ -54,8 +55,7 @@ h1 {
     font-family: var(--fonte01);
     text-align: center;
     padding-top: 10px;
-    font-size: 50px;
-    padding-left: 30px;
+    font-size: 55px;
 }
 
 #img-header {
@@ -75,9 +75,9 @@ h1 {
 .h2-main {
     font-family: var(--fonte03);
     text-align: center;
-    padding-top: 35px;
+    padding-top: 40px;
     padding-bottom: 25px;
-    font-size: 35px;
+    font-size: 37px;
 }
 
 .p-main {
@@ -85,34 +85,46 @@ h1 {
     font-size: 18px;
     font-family: var(--fonte03);
     font-weight: bold;
+    padding: 20px 0px 20px 0px;
+}
+
+.img-main {
+    width: 200px;
+    display: block;
+    margin: auto;
+    padding-top: 20px;
 }
 
 section {
     background-color: var(--cor03);
     width: 100vw;
-    height: 800px;
+    height: 1350px;
     font-family: var(--fonte02);
     margin-top: 50px;
+    box-shadow: 0px 1px 11px 1px rgba(0, 0, 0, 0.527);
 }
 
 .h2-section {
     color: var(--cor01);
     text-align: center;
-    padding-top: 20px;
+    padding-top: 50px;
+    font-size: 25px;
 }
 
 .p-section {
     color: var(--cor01);
     text-align: center;
-    padding-top: 20px;
+    padding: 50px 0px 30px 0px;
 }
+
 .links-planilhas {
     padding: 8px;
+    padding-bottom: 30px;
     border-radius: 13px;
     margin: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 a {
@@ -122,6 +134,7 @@ a {
     border-radius: 13px;
     font-weight: bold;
     text-decoration: none;
+    font-size: 14px;
 }
 
 a:hover {
@@ -130,7 +143,15 @@ a:hover {
     text-decoration: underline;
 }
 
-.planilha {
+.comprar {
+    background-color: var(--cor04);
+    color: var(--cor01);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#planilha-fixa,
+#planilha-editavel {
     background-color: var(--cor01);
     min-width: 200px;
     max-width: 800px;
@@ -140,29 +161,87 @@ a:hover {
     height: 400px;
     padding: 18px;
     border-radius: 20px 0px 20px 0px;
+    box-shadow: 0px 1px 11px 1px rgba(0, 0, 0, 0.527);
 }
 
-.planilha p {
+#planilha-fixa p,
+#planilha-editavel p {
     font-weight: bold;
     font-size: 18px;
     text-align: center;
 }
 
+ul {
+    text-align: center;
+    list-style: url('imagens/check_20dp_474747_FILL0_wght400_GRAD0_opsz20.png');
+    list-style-position: inside;
+}
+
+ul li {
+    padding: 10px;
+}
+
+.fixa,
+.editavel {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.preco {
+    color: rgb(78, 158, 78);
+    padding-top: 7px;
+}
+
 @media screen and (min-width: 992px) {
-    .planilha {
+    #planilha-fixa,
+    #planilha-editavel {
         max-width: 1000px;
+    }
+
+    section {
+        height: 1200px;
+    }
+
+    .img-main {
+        display: none;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-    .planilha {
+    #planilha-fixa,
+    #planilha-editavel {
         max-width: 800px;
+    }
+
+    section {
+        height: 1200px;
+    }
+
+    .img-main {
+        display: none;
     }
 }
 
 @media screen and (max-width: 800px) {
-    .planilha {
+    #planilha-fixa,
+    #planilha-editavel {
         min-width: 300px;
         max-width: 400px;
+        height: 470px;
     }
+}
+
+footer {
+    background-color: var(--cor01);
+    width: 100vw;
+    height: 50px;
+    margin-top: 40px;
+}
+
+.footer {
+    text-align: center;
+    padding-top: 18px;
+    color: var(--cor05);
+    font-family: var(--fonte02);
+    font-size: 14px;
 }
